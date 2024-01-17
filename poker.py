@@ -39,7 +39,7 @@ else:
         ap=int(input("Cuantosquieres apostar?"))
         while ap<ciega_grande:
             print("Es una apuesta muy pequeña prueba con una mas grande")
-            ap=int(input("Cuantosquieres apostar?"))
+            ap=int(input("Cuantos quieres apostar?"))
 time.sleep(1)
 print("El flop es:")
 while flop<3:

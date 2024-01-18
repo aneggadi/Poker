@@ -69,4 +69,4 @@ if retirarse=="Apostar":
         bote+=apues
         print("Bote actual =", bote)
     if ap == "igualar":
-        du
+        bote= bote+(apuesta_max-dinero_jugador)

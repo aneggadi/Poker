@@ -21,12 +21,15 @@ def repartir_cartas(numero_cartas):
 def floop(numero_cartas1):
     return random.sample(baraja1, numero_cartas1)
 
+
 # Ejemplo de repartición de cartas
 mano_jugador = repartir_cartas(5)
 flp = floop(5)
 n=0
 flop=0
 bote=0
+apuesta_max=0
+dinero_jugador=0
 print("Tu mano:")
 while n<2:
     print(mano_jugador[n])
@@ -35,6 +38,7 @@ while n<2:
 time.sleep(1)
 ciega_pequeña=int(input("Cuanto va a ser la ciega pequeña ciegas pequeña?"))
 ciega_grande=ciega_pequeña*2
+apuesta_max+=ciega_grande
 bote=bote+ciega_grande+ciega_pequeña
 retirarse=input("Que desea hacer ahora? (Apostar/Retirarse)")
 if retirarse=="Retirarse":
@@ -45,18 +49,24 @@ if retirarse=="Apostar":
     while ap<ciega_grande:
         print("Es una apuesta muy pequeña prueba con una mas grande")
         ap=int(input("Cuantos quieres apostar?"))
+    dinero_jugador+=ap
     bote+=ap
     print("El bote actual es:", bote)
 time.sleep(1)
 print("El flop es:")
 while flop<3:
     print(flp[flop])
-    retirarse=input("Que desea hacer ahora? (Apostar/Retirarse)")
-    if retirarse=="Retirarse":
-        print("Su apuesta ha terminado")
-        exit()
-    if retirarse=="Apostar":
-        ap=int(input("Cuantosquieres apostar?"))
-        bote+=ap
-        print("Bote actual =", bote)
     flop=flop+1
+retirarse=input("Que desea hacer ahora? (Apostar/Retirarse)")
+if retirarse=="Retirarse":
+    print("Su apuesta ha terminado")
+    exit()
+if retirarse=="Apostar":
+    ap=int(input("Que quieres hacer subir o igualar?"))
+    if ap == "subir":
+        apues=int(input("Cuanto desea apostar?"))
+        dinero_jugador+=apues
+        bote+=apues
+        print("Bote actual =", bote)
+    if ap == "igualar":
+        du

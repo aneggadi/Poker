@@ -40,6 +40,11 @@ def flopp(a):
         print(flop[b]) 
         b=b+1
 
+def ciega():
+    ciega_pequeña=int(input("Ingrese la ciega pequeña"))
+    ciega_grande=ciega_pequeña*2
+
+
 print("Tu mano:") 
 repartir(2)
 pregunta()

@@ -15,19 +15,6 @@ baraja1=baraja
 
 cartas_jugador1=[]
 
-def ciega():
-    ciega_pequeña=int(input("Ingrese la ciega pequeña"))
-    ciega_grande=ciega_pequeña*2
-
-def botet(algo):
-    bote=0
-    bote+=algo
-    print("El bote es:", bote)
-    
-
-def repartir_cartas(numero_cartas):
-    return random.sample(baraja, numero_cartas)
-
 def floop(numero_cartas1):
     return random.sample(baraja1, numero_cartas1)
 
@@ -35,11 +22,29 @@ def apostar():
     apuesta=int(input("Cuanto deseas apostar?"))
     botet(apuesta)
 
+def botet(algo):
+    bote=0
+    bote+=algo
+    print("El bote es:", bote)
+
+def ciega():
+    ciega_pequeña=int(input("Ingrese la ciega pequeña:"))
+    ciega_grande=ciega_pequeña*2
+    apuesta_ciega=int(input("Que deseas apostar ahora:"))
+    while apuesta_ciega<ciega_grande:
+        print("Es una apuesta muy pequeña prueba con una mas grande")
+        apuesta_ciega=int(input("Cuantos quieres apostar?"))
+    botet(apuesta_ciega)
+def repartir_cartas(numero_cartas):
+    return random.sample(baraja, numero_cartas)
+    
 
 def pregunta():
     n=input("Que quieres hacer ahora? (apostar/retirarse)")
-    if n=="apostar":
+    if n=="apostar" or n=="Apostar":
         apostar()
+    if n=="Retirarse" or n=="retirarse":
+        exit()
 
 def repartir(cartas):
     mano_jugador=repartir_cartas(52)
@@ -50,13 +55,14 @@ def repartir(cartas):
         n=n+1
 
 
-def ciega():
-    ciega_pequeña=int(input("Ingrese la ciega pequeña"))
-    ciega_grande=ciega_pequeña*2
+#def ciega():
+ #   ciega_pequeña=int(input("Ingrese la ciega pequeña"))
+  #  ciega_grande=ciega_pequeña*2
 
 
-print("Tu mano:") 
-repartir(2)
-pregunta()
-print("El flop es:")
-repartir(3)
+#print("Tu mano:") 
+#repartir(2)
+ciega()
+#pregunta()
+#print("El flop es:")
+#repartir(3)

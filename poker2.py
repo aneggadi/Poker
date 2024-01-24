@@ -12,9 +12,9 @@ baraja = [
     '9 ' + chr(5), '10 ' + chr(5), 'J ' + chr(5), 'Q ' + chr(5), 'K ' + chr(5), 'A ' + chr(5)
 ]
 baraja1=baraja
+bote = 0
 
 cartas_jugador1=[]
-bote=0
 def floop(numero_cartas1):
     return random.sample(baraja1, numero_cartas1)
 
@@ -23,17 +23,19 @@ def apostar():
     botet(apuesta)
 
 def botet(algo):
+    global bote
     bote+=algo
     print("El bote es:", bote)
 
+ciega_pequeña=int(input("Ingrese la ciega pequeña:"))
+ciega_grande=ciega_pequeña*2
 def ciega():
-    ciega_pequeña=int(input("Ingrese la ciega pequeña:"))
-    ciega_grande=ciega_pequeña*2
     apuesta_ciega=int(input("Que deseas apostar ahora:"))
     while apuesta_ciega<ciega_grande:
         print("Es una apuesta muy pequeña prueba con una mas grande")
         apuesta_ciega=int(input("Cuantos quieres apostar?"))
     botet(apuesta_ciega)
+
 def repartir_cartas(numero_cartas):
     return random.sample(baraja, numero_cartas)
     
@@ -51,23 +53,31 @@ def repartir(cartas):
     while n<cartas:
         print(mano_jugador[n])
         cartas_jugador1.append(mano_jugador[n])
+        time.sleep(1)
         n=n+1
 
-def botap():
-    bot = random.random(1,2)
+def botap(algo):
+    bot = random.randint(1,1)
     if bot==1:
         print("El bot a decidido apostar")
-        apostar=random.sample(apostar)
+        dudi= random.randrange(ciega_grande, algo)
+        print(dudi)
+        botet(dudi)
 
-#def ciega():
- #   ciega_pequeña=int(input("Ingrese la ciega pequeña"))
-  #  ciega_grande=ciega_pequeña*2
+    if bot==2:
+        print("El bot ha decidido retirarse")
+    
 
 
-print("Tu mano:") 
-repartir(2)
-ciega()
-pregunta()
-print("El flop es:")
-repartir(3)
-print(cartas_jugador1[0], cartas_jugador1[1], cartas_jugador1[2], cartas_jugador1[3],cartas_jugador1[4])
+
+
+#print("Tu mano:") 
+#repartir(2)
+#time.sleep(1)
+#print("La ciega grande es:", ciega_grande)
+botap(100)
+
+#pregunta()
+#print("El flop es:")
+#repartir(3)
+#print(cartas_jugador1[0], cartas_jugador1[1], cartas_jugador1[2], cartas_jugador1[3],cartas_jugador1[4])

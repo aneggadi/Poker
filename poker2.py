@@ -1,5 +1,6 @@
 import random
 import time
+import bot
 
 baraja = [
     '2 ' + chr(3), '3 ' + chr(3), '4 ' + chr(3) , '5 ' + chr(3), '6 ' + chr(3), '7 ' + chr(3), '8 ' + chr(3),
@@ -13,14 +14,19 @@ baraja = [
 ]
 baraja1=baraja
 bote = 0
+max_credito=500
 
 cartas_jugador1=[]
-def floop(numero_cartas1):
-    return random.sample(baraja1, numero_cartas1)
+
+
+def repartir_cartas(numero_cartas):
+    return random.sample(baraja, numero_cartas)
 
 def apostar():
     apuesta=int(input("Cuanto deseas apostar?"))
+    global max_credito
     botet(apuesta)
+    max_credito-=apuesta
 
 def botet(algo):
     global bote
@@ -29,6 +35,9 @@ def botet(algo):
 
 ciega_pequeña=int(input("Ingrese la ciega pequeña:"))
 ciega_grande=ciega_pequeña*2
+sumaciega=ciega_grande+ciega_pequeña
+print("La ciega grande es:", ciega_grande)
+botet(sumaciega)
 def ciega():
     apuesta_ciega=int(input("Que deseas apostar ahora:"))
     while apuesta_ciega<ciega_grande:
@@ -36,8 +45,6 @@ def ciega():
         apuesta_ciega=int(input("Cuantos quieres apostar?"))
     botet(apuesta_ciega)
 
-def repartir_cartas(numero_cartas):
-    return random.sample(baraja, numero_cartas)
     
 
 def pregunta():
@@ -57,27 +64,29 @@ def repartir(cartas):
         n=n+1
 
 def botap(algo):
-    bot = random.randint(1,1)
-    if bot==1:
+    bot = random.randint(1,10)
+    if 9>bot>=1:
         print("El bot a decidido apostar")
         dudi= random.randrange(ciega_grande, algo)
-        print(dudi)
+        print("El bot ha apostado:", dudi)
         botet(dudi)
-
-    if bot==2:
-        print("El bot ha decidido retirarse")
+    else:
+        print("El bot ha decidido retirarse, Has ganado:")
+        botet(0)
+        exit()
     
 
 
 
 
-#print("Tu mano:") 
-#repartir(2)
-#time.sleep(1)
-#print("La ciega grande es:", ciega_grande)
-botap(100)
-
-#pregunta()
-#print("El flop es:")
-#repartir(3)
-#print(cartas_jugador1[0], cartas_jugador1[1], cartas_jugador1[2], cartas_jugador1[3],cartas_jugador1[4])
+print("Tu mano:") 
+repartir(2)
+time.sleep(1)
+print("La ciega grande es:", ciega_grande)
+ciega()
+apostar()
+botap(max_credito)
+pregunta()
+print("El flop es:")
+repartir(3)
+print("  ".join(cartas_jugador1))

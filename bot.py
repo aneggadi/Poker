@@ -1,6 +1,5 @@
 import random
 import time 
-import bot
 
 baraja = [
     '2 ' + chr(3), '3 ' + chr(3), '4 ' + chr(3) , '5 ' + chr(3), '6 ' + chr(3), '7 ' + chr(3), '8 ' + chr(3),
@@ -15,18 +14,27 @@ baraja = [
 cartasbot=[]
 
 
-def cartas_bot(numero_cartas1):
-    return random.sample(baraja, numero_cartas1)
+def cartas_bot():
+    random.shuffle(baraja)
 
-def repartir_bot(cartas):
-    mano_jugador=cartas_bot(52)
-    n=0
-    while n<cartas:
-        print(mano_jugador[n])
-        cartasbot.append(mano_jugador[n])
-        time.sleep(1)
-        n=n+1
+def repartir(n):
+    cartas_bot()
+    i=0
+    while i<n:
+        print(baraja[i])
+        baraja.pop(i)
+        i=i+1
 
-repartir_bot(2)
-repartir_bot(3)
-print("  ".join(cartasbot))
+#def repartir_bot(cartas):
+    #mano_bot=cartas_bot()
+    #n=0
+    #while n<cartas:
+    #    print(mano_bot[n])
+     #   cartasbot.append(mano_bot[n])
+      #  time.sleep(1)
+       # n=n+1
+        #baraja.pop(n)
+
+
+
+

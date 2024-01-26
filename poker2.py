@@ -19,8 +19,17 @@ max_credito=500
 cartas_jugador1=[]
 
 
-def repartir_cartas(numero_cartas):
-    return random.sample(baraja, numero_cartas)
+def cartas_jugador():
+    random.shuffle(baraja)
+
+def repartir(n):
+    cartas_jugador()
+    i=0
+    while i<n:
+        print(baraja[i])
+        cartas_jugador1.append(baraja[i])
+        baraja.pop(i)
+        i=i+1
 
 def apostar():
     apuesta=int(input("Cuanto deseas apostar?"))
@@ -54,14 +63,6 @@ def pregunta():
     if n=="Retirarse" or n=="retirarse":
         exit()
 
-def repartir(cartas):
-    mano_jugador=repartir_cartas(52)
-    n=0
-    while n<cartas:
-        print(mano_jugador[n])
-        cartas_jugador1.append(mano_jugador[n])
-        time.sleep(1)
-        n=n+1
 
 def botap(algo):
     bot = random.randint(1,10)
@@ -84,9 +85,9 @@ repartir(2)
 time.sleep(1)
 print("La ciega grande es:", ciega_grande)
 ciega()
-apostar()
+repartir(3)
 botap(max_credito)
+apostar()
 pregunta()
 print("El flop es:")
-repartir(3)
 print("  ".join(cartas_jugador1))

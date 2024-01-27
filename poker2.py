@@ -31,6 +31,15 @@ def repartir(n):
         baraja.pop(i)
         i=i+1
 
+def flop(n):
+    cartas_jugador()
+    i=0
+    while i<n:
+        print(baraja[i])
+        cartas_jugador1.append(baraja[i])
+        bot.cartasbot.append(baraja[i])
+        i=i+1
+
 def apostar():
     apuesta=int(input("Cuanto deseas apostar?"))
     global max_credito
@@ -82,12 +91,9 @@ def botap(algo):
 
 print("Tu mano:") 
 repartir(2)
-time.sleep(1)
-print("La ciega grande es:", ciega_grande)
-ciega()
-repartir(3)
-botap(max_credito)
-apostar()
-pregunta()
+print("  ")
+bot.repartir(2)
 print("El flop es:")
-print("  ".join(cartas_jugador1))
+flop(3)
+print(" ".join(cartas_jugador1))
+print(" ".join(bot.cartasbot))

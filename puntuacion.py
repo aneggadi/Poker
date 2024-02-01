@@ -17,7 +17,7 @@ def cartas(n,tipo):
             valor=98
             val_max=min4
         else:
-            valor=97      #asignar valor a color
+            valor=95      #asignar valor a color
             val_max=min4
             val_max2=min3
             val_max3=min2

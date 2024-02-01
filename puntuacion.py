@@ -11,7 +11,7 @@ def cartas(n,tipo):
         min2=min1+1
         min3=min2+1
         min4=min3+1
-        if poker2.cartas_jugador1[0]==10 and poker2.cartas_jugador1[1]==11 and poker2.cartas_jugador1[2]==12 and poker2.cartas_jugador1[3]==13 and poker2.cartas_jugador1[4]==11:
+        if poker2.cartas_jugador1[0]==10 and poker2.cartas_jugador1[1]==11 and poker2.cartas_jugador1[2]==12 and poker2.cartas_jugador1[3]==13 and poker2.cartas_jugador1[4]==14:
             valor=99
         elif min1==poker2.cartas_jugador1[1] and min2==poker2.cartas_jugador1[2] and min3==poker2.cartas_jugador1[3] and min4==poker2.cartas_jugador1[4]:
             valor=98

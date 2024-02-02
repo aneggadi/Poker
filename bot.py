@@ -24,17 +24,3 @@ def repartir(n):
         cartasbot.append(baraja[i])
         baraja.pop(i)
         i=i+1
-
-#def repartir_bot(cartas):
-    #mano_bot=cartas_bot()
-    #n=0
-    #while n<cartas:
-    #    print(mano_bot[n])
-     #   cartasbot.append(mano_bot[n])
-      #  time.sleep(1)
-       # n=n+1
-        #baraja.pop(n)
-
-
-
-

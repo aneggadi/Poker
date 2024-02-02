@@ -1,15 +1,25 @@
+import time
 import poker2
 import bot
+import puntuacion
 
-print("Tu mano:") 
+print("Tu mano:")
+print("  ")
 poker2.repartir(2)
 print("  ")
-print("Cartas del bot:")
 bot.repartir(2)
-print(poker2.apostar(), "Tu credito actual es:", poker2.max_credito)
+poker2.ciega()
+print("Tu credito actual es:", poker2.max_credito)
 print("El flop es:")
 poker2.flop(3)
+puntuacion.puntosjugador(5)
+puntuacion.puntosbot(5)
+print("  ")
 print("Tus cartas con el flop es:")
 print(" ".join(poker2.cartas_jugador1))
-print("Las cortas del bot con el flop es:")
-print(" ".join(bot.cartasbot))
+time.sleep(1)
+print("tu puntuacion actual es:" , puntuacion.puntostotales)
+time.sleep(1)
+poker2.pregunta()
+poker2.botap(poker2.max_credito)
+puntuacion.comparacion()

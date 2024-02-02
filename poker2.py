@@ -14,7 +14,7 @@ baraja = [
 ]
 baraja1=baraja
 bote = 0
-max_credito=500
+max_credito=int(input("Con cuanto dinero quieres jugasr?:"))
 
 cartas_jugador1=[]
 
@@ -29,6 +29,7 @@ def repartir(n):
         print(baraja[i])
         cartas_jugador1.append(baraja[i])
         baraja.pop(i)
+        time.sleep(1)
         i=i+1
 
 def flop(n):
@@ -38,6 +39,7 @@ def flop(n):
         print(baraja[i])
         cartas_jugador1.append(baraja[i])
         bot.cartasbot.append(baraja[i])
+        time.sleep(1)
         i=i+1
 
 def apostar():
@@ -49,18 +51,20 @@ def apostar():
 def botet(algo):
     global bote
     bote+=algo
+    time.sleep(1)
     print("El bote es:", bote)
 
 ciega_pequeña=int(input("Ingrese la ciega pequeña:"))
 ciega_grande=ciega_pequeña*2
 sumaciega=ciega_grande+ciega_pequeña
+time.sleep(1)
 print("La ciega grande es:", ciega_grande)
 botet(sumaciega)
 def ciega():
-    apuesta_ciega=int(input("Que deseas apostar ahora:"))
+    apuesta_ciega=int(input("Cuanto deseas apostar?:"))
     while apuesta_ciega<ciega_grande:
         print("Es una apuesta muy pequeña prueba con una mas grande")
-        apuesta_ciega=int(input("Cuantos quieres apostar?"))
+        ciega()
     botet(apuesta_ciega)
 
     
@@ -84,9 +88,3 @@ def botap(algo):
         print("El bot ha decidido retirarse, Has ganado:")
         botet(0)
         exit()
-
-def max_apuesta():
-    print(max_credito)
-
-apostar()
-max_apuesta()

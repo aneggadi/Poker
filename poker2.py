@@ -14,10 +14,20 @@ baraja = [
 ]
 baraja1=baraja
 bote = 0
-max_credito=int(input("Con cuanto dinero quieres jugasr?:"))
+max_credito=int(input("Con cuanto dinero quieres empezar jugando?"))
+time.sleep(0.5)
 
 cartas_jugador1=[]
 
+def menos_del_max():
+    global max_credito
+    if max_credito<0:
+        que_paso=input("Tu credito se ha agotado que desea hacer? aumentar el credito a retirarse (aumentar/retirarse)")
+        if que_paso=="aumentar":
+            aumentarcreditos=int(input("cuanto quieres aumentar tu credito?"))
+            max_credito+=aumentarcreditos
+        if que_paso=="retirarse":
+            exit()
 
 def cartas_jugador():
     random.shuffle(baraja)
@@ -60,12 +70,16 @@ sumaciega=ciega_grande+ciega_pequeña
 time.sleep(1)
 print("La ciega grande es:", ciega_grande)
 botet(sumaciega)
+
 def ciega():
+    global max_credito
     apuesta_ciega=int(input("Cuanto deseas apostar?:"))
-    while apuesta_ciega<ciega_grande:
+    if apuesta_ciega<ciega_grande:
         print("Es una apuesta muy pequeña prueba con una mas grande")
         ciega()
-    botet(apuesta_ciega)
+    else:
+        botet(apuesta_ciega)
+        max_credito-=apuesta_ciega
 
     
 

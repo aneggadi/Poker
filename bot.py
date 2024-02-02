@@ -21,7 +21,6 @@ def repartir(n):
     cartas_bot()
     i=0
     while i<n:
-        print(baraja[i])
         cartasbot.append(baraja[i])
         baraja.pop(i)
         i=i+1

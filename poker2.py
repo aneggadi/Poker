@@ -14,7 +14,9 @@ baraja = [
 ]
 baraja1=baraja
 bote = 0
-max_credito=int(input("Con cuanto dinero quieres empezar jugando?"))
+def credito():
+    global max_credito
+    max_credito=int(input("Con cuanto dinero quieres empezar jugando?"))
 max_creditbot=random.randrange(500,1000)
 time.sleep(0.5)
 
@@ -65,14 +67,16 @@ def botet(algo):
     time.sleep(1)
     print("El bote es:", bote)
 
-ciega_pequeña=int(input("Ingrese la ciega pequeña:"))
-ciega_grande=ciega_pequeña*2
-sumaciega=ciega_grande+ciega_pequeña
-time.sleep(1)
-print("La ciega grande es:", ciega_grande)
-botet(sumaciega)
-
 def ciega():
+    global ciega_grande
+    ciega_pequeña=int(input("Ingrese la ciega pequeña:"))
+    ciega_grande=ciega_pequeña*2
+    sumaciega=ciega_grande+ciega_pequeña
+    time.sleep(1)
+    print("La ciega grande es:", ciega_grande)
+    botet(sumaciega)
+
+def postciega():
     global max_credito
     apuesta_ciega=int(input("Cuanto deseas apostar?:"))
     if apuesta_ciega<ciega_grande:

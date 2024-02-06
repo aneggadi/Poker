@@ -15,6 +15,7 @@ baraja = [
 baraja1=baraja
 bote = 0
 max_credito=int(input("Con cuanto dinero quieres empezar jugando?"))
+max_creditbot=random.randrange(500,1000)
 time.sleep(0.5)
 
 cartas_jugador1=[]

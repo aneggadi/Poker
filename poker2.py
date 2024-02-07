@@ -14,8 +14,10 @@ baraja = [
 ]
 baraja1=baraja
 bote = 0
-max_credito=int(input("Con cuanto dinero quieres empezar jugando?"))
-credito_bot=random.randrange(500,1000)
+def credito():
+    global max_credito
+    max_credito=int(input("Con cuanto dinero quieres empezar jugando?"))
+max_creditbot=random.randrange(500,1000)
 time.sleep(0.5)
 
 cartas_jugador1=[]
@@ -41,8 +43,8 @@ def menos_del_max():
             salirderrota()
 
 def menos_creditos_bot():
-    global credito_bot
-    if credito_bot<0:
+    global max_creditbot
+    if max_creditbot<0:
         print("El bot no tiene mas dinero")
         salirvictoria()
 
@@ -82,14 +84,16 @@ def botet(algo):
     time.sleep(1)
     print("El bote es:", bote)
 
-ciega_pequeña=int(input("Ingrese la ciega pequeña:"))
-ciega_grande=ciega_pequeña*2
-sumaciega=ciega_grande+ciega_pequeña
-time.sleep(1)
-print("La ciega grande es:", ciega_grande)
-botet(sumaciega)
-
 def ciega():
+    global ciega_grande
+    ciega_pequeña=int(input("Ingrese la ciega pequeña:"))
+    ciega_grande=ciega_pequeña*2
+    sumaciega=ciega_grande+ciega_pequeña
+    time.sleep(1)
+    print("La ciega grande es:", ciega_grande)
+    botet(sumaciega)
+
+def postciega():
     global max_credito
     apuesta_ciega=int(input("Cuanto deseas apostar?:"))
     if apuesta_ciega<ciega_grande:
@@ -111,14 +115,14 @@ def pregunta():
 
 
 def botap(algo):
-    global credito_bot
+    global max_creditbot
     bot = random.randint(1,10)
     if 9>bot>=1:
         print("El bot a decidido apostar")
-        dudi= random.randrange(ciega_grande, algo)
+        dudi = random.randrange(ciega_grande, algo)
         print("El bot ha apostado:", dudi)
         botet(dudi)
-        credito_bot-=dudi
+        max_creditbot-=dudi
     else:
         print("El bot ha decidido retirarse, Has ganado:")
         salirvictoria()

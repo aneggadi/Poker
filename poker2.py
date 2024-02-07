@@ -15,9 +15,20 @@ baraja = [
 baraja1=baraja
 bote = 0
 max_credito=int(input("Con cuanto dinero quieres empezar jugando?"))
+credito_bot=random.randrange(500,1000)
 time.sleep(0.5)
 
 cartas_jugador1=[]
+
+def salirvictoria():
+    global bote
+    print("has ganado la partida y con ello has ganado", bote)
+    exit()
+
+def salirderrota():
+    global bote
+    print("has perdido la partida y con ello has perdido", bote)
+    exit()
 
 def menos_del_max():
     global max_credito
@@ -27,7 +38,13 @@ def menos_del_max():
             aumentarcreditos=int(input("cuanto quieres aumentar tu credito?"))
             max_credito+=aumentarcreditos
         if que_paso=="retirarse":
-            exit()
+            salirderrota()
+
+def menos_creditos_bot():
+    global credito_bot
+    if credito_bot<0:
+        print("El bot no tiene mas dinero")
+        salirvictoria()
 
 def cartas_jugador():
     random.shuffle(baraja)
@@ -57,6 +74,7 @@ def apostar():
     global max_credito
     botet(apuesta)
     max_credito-=apuesta
+    menos_del_max()
 
 def botet(algo):
     global bote
@@ -80,6 +98,7 @@ def ciega():
     else:
         botet(apuesta_ciega)
         max_credito-=apuesta_ciega
+        menos_del_max()
 
     
 
@@ -88,17 +107,18 @@ def pregunta():
     if n=="apostar" or n=="Apostar":
         apostar()
     if n=="Retirarse" or n=="retirarse":
-        exit()
+        salirderrota()
 
 
 def botap(algo):
+    global credito_bot
     bot = random.randint(1,10)
     if 9>bot>=1:
         print("El bot a decidido apostar")
         dudi= random.randrange(ciega_grande, algo)
         print("El bot ha apostado:", dudi)
         botet(dudi)
+        credito_bot-=dudi
     else:
         print("El bot ha decidido retirarse, Has ganado:")
-        botet(0)
-        exit()
+        salirvictoria()

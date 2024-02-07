@@ -22,7 +22,7 @@ def juego():
     print("tu puntuacion actual es:" , puntuacion.puntostotales)
     time.sleep(1)
     poker2.pregunta()
-    poker2.botap(poker2.max_credito)
+    poker2.botap(poker2.credito_bot)
     puntuacion.comparacion()
     jugardenuevo=input("Quieres volver a jugar o terminar (jugar/terminar)")
     if jugardenuevo=="jugar":

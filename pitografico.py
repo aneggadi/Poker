@@ -22,31 +22,32 @@ baraja = [
 baraja1 = baraja
 bote = 0
 max_credito = 0
-
-# Create label and entry for initial credit
-credit_label = tk.Label(root, text="Credito inical:")
-credit_label.grid(row=0, column=0)
-credit_entry = tk.Entry(root, width=100)
-credit_entry.grid(row=0, column=1)
-
 def start_game():
     global max_credito
     max_credito = int(credit_entry.get())
+    button_pressed()
 
     # Rest of the code
-def button_pressed(event):
-    print("Button pressed!")
+def button_pressed():
+    print("Credito ingresado")
 
-root = tk.Tk()
-button = tk.Button(root, text="Press me!")
-button.pack()
-button.bind("<Button-1>", button_pressed)
+# Create label and entry for initial credit
+credit_label = tk.Label(root, text="Credito inical:")
+button = tk.Button(root, text="Ingresar")
+credit_label.grid(row=0, column=0)
+button.grid (row=1, column=0)
+credit_entry = tk.Entry(root, width=100)
+credit_entry.grid(row=0, column=1)
+button = tk.Button(root, text="Start game", command=start_game)
+
+
+
 
 root.mainloop()
 # Create button to start the game
-start_button = tk.Button(root, text="Start game", command=start_game)
+button = tk.Button(root, text="Start game", command=start_game)
 
-start_button.grid(row=1, column=0, columnspan=2)
+
 
 # Rest of the code
 

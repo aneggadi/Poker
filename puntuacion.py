@@ -14,7 +14,7 @@ def numjugador(cartasrepartidas):
         elif poker2.cartas_jugador1[i]=='5 ' + chr(3) or poker2.cartas_jugador1[i]=='5 ' + chr(4) or poker2.cartas_jugador1[i]=='5 ' + chr(5) or poker2.cartas_jugador1[i]=='5 ' + chr(6):
             cinco+=1
         elif poker2.cartas_jugador1[i]=='6 ' + chr(3) or poker2.cartas_jugador1[i]=='6 ' + chr(4) or poker2.cartas_jugador1[i]=='6 ' + chr(5) or poker2.cartas_jugador1[i]=='6 ' + chr(6):
-            seis+=5
+            seis+=1
         elif poker2.cartas_jugador1[i]=='7 ' + chr(3) or poker2.cartas_jugador1[i]=='7 ' + chr(4) or poker2.cartas_jugador1[i]=='7 ' + chr(5) or poker2.cartas_jugador1[i]=='7 ' + chr(6):
             siete+=1
         elif poker2.cartas_jugador1[i]=='8 ' + chr(3) or poker2.cartas_jugador1[i]=='8 ' + chr(4) or poker2.cartas_jugador1[i]=='8 ' + chr(5) or poker2.cartas_jugador1[i]=='8 ' + chr(6):

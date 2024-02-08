@@ -22,14 +22,14 @@ baraja = [
 baraja1 = baraja
 bote = 0
 max_credito = 0
+def button_pressed():
+    print("Credito ingresado")
+
 def start_game():
     global max_credito
     max_credito = int(credit_entry.get())
     button_pressed()
-
     # Rest of the code
-def button_pressed():
-    print("Credito ingresado")
 
 # Create label and entry for initial credit
 credit_label = tk.Label(root, text="Credito inical:")

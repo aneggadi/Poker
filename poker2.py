@@ -20,7 +20,7 @@ def credito():
 max_creditbot=random.randrange(500,1000)
 time.sleep(0.5)
 
-cartas_jugador1=[]
+cartas_jugador1=['A ' + chr(3),'A ' + chr(4),'3 ' + chr(5),'3 ' + chr(6), '2 ' + chr(5)]
 
 def salirvictoria():
     global bote

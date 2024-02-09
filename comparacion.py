@@ -5,6 +5,7 @@ import color
 valorcartas=0
 def escaleracolor():
     global valorcartas
+    #escaleras
     if color.trebor==5 or color.picas==5 or color.corazones==5 or color.diamantes==5:
         if puntuacion.dos==1:
             if puntuacion.tres==1:
@@ -120,6 +121,33 @@ def escaleracolor():
                 valorcartas=156
         else:
             valorcartas=334
+    #pareja
+    elif puntuacion.ass==2:
+        valorcartas=55
+    elif puntuacion.rey==2:
+        valorcartas=54
+    elif puntuacion.reina==2:
+        valorcartas=53
+    elif puntuacion.jota==2:
+        valorcartas=52
+    elif puntuacion.diez==2:
+        valorcartas=51
+    elif puntuacion.nueve==2:
+        valorcartas=50
+    elif puntuacion.ocho==2:
+        valorcartas=49
+    elif puntuacion.siete==2:
+        valorcartas=48
+    elif puntuacion.seis==2:
+        valorcartas=47
+    elif puntuacion.cinco==2:
+        valorcartas=46
+    elif puntuacion.cuatro==2:
+        valorcartas=45
+    elif puntuacion.tres==2:
+        valorcartas=44
+    elif puntuacion.dos==2:
+        valorcartas=43
     #poker
     elif puntuacion.ass==4:
             valorcartas=325

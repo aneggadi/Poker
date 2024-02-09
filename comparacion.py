@@ -678,76 +678,76 @@ def escaleracolor():
              valorcartasjugador=77
     elif puntuacion.ocho==2:
         if puntuacion.siete==2:
-            valorcartasjugador=234
+            valorcartasjugador=76
         elif puntuacion.seis==2:
-            valorcartasjugador=233
+            valorcartasjugador=75
         elif puntuacion.cinco==2:
-            valorcartasjugador=232
+            valorcartasjugador=74
         elif puntuacion.cuatro==2:
-            valorcartasjugador=231
+            valorcartasjugador=73
         elif puntuacion.tres==2:
-            valorcartasjugador=230
+            valorcartasjugador=72
         elif puntuacion.dos==2:
-             valorcartasjugador=229
+             valorcartasjugador=71
     elif puntuacion.siete==2:
         if puntuacion.seis==2:
-            valorcartasjugador=221
+            valorcartasjugador=70
         elif puntuacion.cinco==2:
-            valorcartasjugador=220
+            valorcartasjugador=69
         elif puntuacion.cuatro==2:
-            valorcartasjugador=219
+            valorcartasjugador=68
         elif puntuacion.tres==2:
-            valorcartasjugador=218
+            valorcartasjugador=67
         else:
-            valorcartasjugador=301
+            valorcartasjugador=66
     elif puntuacion.seis==2:
         if puntuacion.cinco==2:
-            valorcartasjugador=208
+            valorcartasjugador=65
         elif puntuacion.cuatro==2:
-            valorcartasjugador=207
+            valorcartasjugador=64
         elif puntuacion.tres==2:
-            valorcartasjugador=206
+            valorcartasjugador=63
         elif puntuacion.dos==2:
-             valorcartasjugador=205
+             valorcartasjugador=62
     elif puntuacion.cinco==2:
         if puntuacion.cuatro==2:
-            valorcartasjugador=195
+            valorcartasjugador=61
         elif puntuacion.tres==2:
-            valorcartasjugador=194
+            valorcartasjugador=60
         elif puntuacion.dos==2:
-             valorcartasjugador=193
+             valorcartasjugador=59
     elif puntuacion.cuatro==2:
         if puntuacion.tres==2:
-            valorcartasjugador=182
+            valorcartasjugador=58
         elif puntuacion.dos==2:
-             valorcartasjugador=181
+             valorcartasjugador=57
     elif puntuacion.tres==2:
         if puntuacion.dos==2:
-             valorcartasjugador=169
+             valorcartasjugador=56
 #Pareja
     elif puntuacion.ass==2:
-        valorcartasjugador=146
+        valorcartasjugador=55
     elif puntuacion.rey==2:
-        valorcartasjugador=145
+        valorcartasjugador=54
     elif puntuacion.reina==2:
-        valorcartasjugador=144
+        valorcartasjugador=53
     elif puntuacion.jota==2:
-        valorcartasjugador=143
+        valorcartasjugador=52
     elif puntuacion.diez==2:
-        valorcartasjugador=142
+        valorcartasjugador=51
     elif puntuacion.nueve==2:
-        valorcartasjugador=141
-    elif puntuacion.ocho==3:
-        valorcartasjugador=140
-    elif puntuacion.siete==3:
-        valorcartasjugador=139
-    elif puntuacion.seis==3:
-        valorcartasjugador=138
-    elif puntuacion.cinco==3:
-        valorcartasjugador=137
-    elif puntuacion.cuatro==3:
-        valorcartasjugador=136
-    elif puntuacion.tres==3:
-        valorcartasjugador=135
-    elif puntuacion.dos==3:
-        valorcartasjugador=134
+        valorcartasjugador=50
+    elif puntuacion.ocho==2:
+        valorcartasjugador=49
+    elif puntuacion.siete==2:
+        valorcartasjugador=48
+    elif puntuacion.seis==2:
+        valorcartasjugador=47
+    elif puntuacion.cinco==2:
+        valorcartasjugador=46
+    elif puntuacion.cuatro==2:
+        valorcartasjugador=45
+    elif puntuacion.tres==2:
+        valorcartasjugador=44
+    elif puntuacion.dos==2:
+        valorcartasjugador=43

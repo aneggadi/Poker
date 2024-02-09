@@ -27,5 +27,3 @@ def puntosbot(cartasrepartidas):
             trebor+=1
         elif bot.cartasbot[i]=='2 '   + chr(6) or bot.cartasbot[i]=='3 ' + chr(6) or bot.cartasbot[i]=='4 ' + chr(6) or bot.cartasbot[i]=='5 ' + chr(6)  or bot.cartasbot[i]=='6 ' + chr(6) or bot.cartasbot[i]=='7 ' + chr(6) or bot.cartasbot[i]=='8 ' + chr(6) or bot.cartasbot[i]=='9 ' + chr(6) or bot.cartasbot[i]=='10 ' + chr(6) or bot.cartasbot[i]=='J ' + chr(6) or bot.cartasbot[i]=='Q ' + chr(6) or bot.cartasbot[i]=='K ' + chr(6) or bot.cartasbot[i]=='A ' + chr(6):
             picas+=1
-
-

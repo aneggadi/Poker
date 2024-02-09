@@ -6,6 +6,7 @@ valorcartas=0
 def escaleracolor():
     global valorcartas
     if color.trebor==5 or color.picas==5 or color.corazones==5 or color.diamantes==5:
+        #Color, Escalera de color y Escalera real
         if puntuacion.dos==1:
             if puntuacion.tres==1:
                 if puntuacion.cuatro==1:

@@ -23,12 +23,12 @@ def juego():
     time.sleep(1)
     puntuacion.numjugador(len(poker2.cartas_jugador1))
     color.puntosjugador(len(poker2.cartas_jugador1))
-    print(puntuacion.dos, puntuacion.tres, puntuacion.cuatro, puntuacion.cinco, 
-            puntuacion.seis, puntuacion.siete, puntuacion.ocho, puntuacion.nueve,
-            puntuacion.diez, puntuacion.jota, puntuacion.reina, puntuacion.rey, puntuacion.ass)
-    print(color.corazonesjugador, color.diamantesjugador, color.picasjugador, color.treborjugador)
     comparacion.escaleracolor()
-    print("tu puntuacion actual es:", comparacion.valorcartasjugador)
+    valorcartasjugador=comparacion.valorcartas
+    puntuacion.numbot(len(bot.cartasbot))
+    color.puntosbot(len(bot.cartasbot))
+    comparacion.escaleracolor()
+    print("Tu puntuacion actual es:", valorcartasjugador)
     time.sleep(1)
     poker2.pregunta()
     poker2.botap(poker2.max_creditbot)

@@ -5,7 +5,6 @@ import color
 valorcartas=0
 def escaleracolor():
     global valorcartas
-    #escaleras
     if color.trebor==5 or color.picas==5 or color.corazones==5 or color.diamantes==5:
         if puntuacion.dos==1:
             if puntuacion.tres==1:
@@ -121,33 +120,199 @@ def escaleracolor():
                 valorcartas=156
         else:
             valorcartas=334
-    #pareja
+    #Doble pareja y Pareja
     elif puntuacion.ass==2:
-        valorcartas=55
+        if puntuacion.rey==2:
+            valorcartas=133
+        elif puntuacion.reina==2:
+            valorcartas=132
+        elif puntuacion.jota==2:
+            valorcartas=131
+        elif puntuacion.diez==2:
+            valorcartas=130
+        elif puntuacion.nueve==2:
+            valorcartas=129
+        elif puntuacion.ocho==2:
+            valorcartas=128
+        elif puntuacion.siete==2:
+            valorcartas=127
+        elif puntuacion.seis==2:
+            valorcartas=126
+        elif puntuacion.cinco==2:
+            valorcartas=125
+        elif puntuacion.cuatro==2:
+            valorcartas=124
+        elif puntuacion.tres==2:
+            valorcartas=123
+        elif puntuacion.dos==2:
+            valorcartas=122
+        else:
+            valorcartas=55
     elif puntuacion.rey==2:
-        valorcartas=54
+        if puntuacion.reina==2:
+            valorcartas=121
+        elif puntuacion.jota==2:
+            valorcartas=120
+        elif puntuacion.diez==2:
+            valorcartas=119
+        elif puntuacion.nueve==2:
+            valorcartas=118
+        elif puntuacion.ocho==2:
+            valorcartas=117
+        elif puntuacion.siete==2:
+            valorcartas=116
+        elif puntuacion.seis==2:
+            valorcartas=115
+        elif puntuacion.cinco==2:
+            valorcartas=114
+        elif puntuacion.cuatro==2:
+            valorcartas=113
+        elif puntuacion.tres==2:
+            valorcartas=112
+        elif puntuacion.dos==2:
+            valorcartas=111
+        else:
+            valorcartas=54
     elif puntuacion.reina==2:
-        valorcartas=53
+        if puntuacion.jota==2:
+                valorcartas=110
+        elif puntuacion.diez==2:
+                valorcartas=109
+        elif puntuacion.nueve==2:
+                valorcartas=108
+        elif puntuacion.ocho==2:
+                valorcartas=107
+        elif puntuacion.siete==2:
+                valorcartas=106
+        elif puntuacion.seis==2:
+                valorcartas=105
+        elif puntuacion.cinco==2:
+                valorcartas=104
+        elif puntuacion.cuatro==2:
+                valorcartas=103
+        elif puntuacion.tres==2:
+                valorcartas=102
+        elif puntuacion.dos==2:
+                valorcartas=101
+        else:
+            valorcartas=53
     elif puntuacion.jota==2:
-        valorcartas=52
+        if puntuacion.diez==2:
+            valorcartas=100
+        elif puntuacion.nueve==2:
+            valorcartas=99
+        elif puntuacion.ocho==2:
+            valorcartas=98
+        elif puntuacion.siete==2:
+            valorcartas=97
+        elif puntuacion.seis==2:
+            valorcartas=96
+        elif puntuacion.cinco==2:
+            valorcartas=95
+        elif puntuacion.cuatro==2:
+            valorcartas=94
+        elif puntuacion.tres==2:
+            valorcartas=93
+        elif puntuacion.dos==2:
+            valorcartas=92
+        else:
+            valorcartas=52
     elif puntuacion.diez==2:
-        valorcartas=51
+        if puntuacion.nueve==2:
+            valorcartas=91
+        elif puntuacion.ocho==2:
+            valorcartas=90
+        elif puntuacion.siete==2:
+            valorcartas=89
+        elif puntuacion.seis==2:
+            valorcartas=88
+        elif puntuacion.cinco==2:
+            valorcartas=87
+        elif puntuacion.cuatro==2:
+            valorcartas=86
+        elif puntuacion.tres==2:
+            valorcartas=85
+        elif puntuacion.dos==2:
+             valorcartas=84
+        else:
+            valorcartas=51
     elif puntuacion.nueve==2:
-        valorcartas=50
+        if puntuacion.ocho==2:
+            valorcartas=83
+        elif puntuacion.siete==2:
+            valorcartas=82
+        elif puntuacion.seis==2:
+            valorcartas=81
+        elif puntuacion.cinco==2:
+            valorcartas=80
+        elif puntuacion.cuatro==2:
+            valorcartas=79
+        elif puntuacion.tres==2:
+            valorcartas=78
+        elif puntuacion.dos==2:
+             valorcartas=77
+        else:
+            valorcartas=50
     elif puntuacion.ocho==2:
-        valorcartas=49
+        if puntuacion.siete==2:
+            valorcartas=76
+        elif puntuacion.seis==2:
+            valorcartas=75
+        elif puntuacion.cinco==2:
+            valorcartas=74
+        elif puntuacion.cuatro==2:
+            valorcartas=73
+        elif puntuacion.tres==2:
+            valorcartas=72
+        elif puntuacion.dos==2:
+             valorcartas=71
+        else:
+            valorcartas=49
     elif puntuacion.siete==2:
-        valorcartas=48
+        if puntuacion.seis==2:
+            valorcartas=70
+        elif puntuacion.cinco==2:
+            valorcartas=69
+        elif puntuacion.cuatro==2:
+            valorcartas=68
+        elif puntuacion.tres==2:
+            valorcartas=67
+        elif puntuacion.dos==2:
+            valorcartas=66
+        else:
+            valorcartas=48
     elif puntuacion.seis==2:
-        valorcartas=47
+        if puntuacion.cinco==2:
+            valorcartas=65
+        elif puntuacion.cuatro==2:
+            valorcartas=64
+        elif puntuacion.tres==2:
+            valorcartas=63
+        elif puntuacion.dos==2:
+             valorcartas=62
+        else:
+            valorcartas=47
     elif puntuacion.cinco==2:
-        valorcartas=46
+        if puntuacion.cuatro==2:
+            valorcartas=61
+        elif puntuacion.tres==2:
+            valorcartas=60
+        elif puntuacion.dos==2:
+             valorcartas=59
+        else:
+            valorcartas=46
     elif puntuacion.cuatro==2:
-        valorcartas=45
+        if puntuacion.tres==2:
+            valorcartas=58
+        elif puntuacion.dos==2:
+             valorcartas=57
+        else:
+            valorcartas=45 
     elif puntuacion.tres==2:
-        valorcartas=44
-    elif puntuacion.dos==2:
-        valorcartas=43
+        if puntuacion.dos==2:
+             valorcartas=56
+        else:
+            valorcartas=44    
     #poker
     elif puntuacion.ass==4:
             valorcartas=325
@@ -583,200 +748,4 @@ def escaleracolor():
         valorcartas=135
     elif puntuacion.dos==3:
         valorcartas=134
-#Doble pareja
-    elif puntuacion.ass==2:
-        if puntuacion.rey==2:
-            valorcartas=133
-        elif puntuacion.reina==2:
-            valorcartas=132
-        elif puntuacion.jota==2:
-            valorcartas=131
-        elif puntuacion.diez==2:
-            valorcartas=130
-        elif puntuacion.nueve==2:
-            valorcartas=129
-        elif puntuacion.ocho==2:
-            valorcartas=128
-        elif puntuacion.siete==2:
-            valorcartas=127
-        elif puntuacion.seis==2:
-            valorcartas=126
-        elif puntuacion.cinco==2:
-            valorcartas=125
-        elif puntuacion.cuatro==2:
-            valorcartas=124
-        elif puntuacion.tres==2:
-            valorcartas=123
-        elif puntuacion.dos==2:
-            valorcartas=122
-    elif puntuacion.rey==2:
-        if puntuacion.reina==2:
-            valorcartas=121
-        elif puntuacion.jota==2:
-            valorcartas=120
-        elif puntuacion.diez==2:
-            valorcartas=119
-        elif puntuacion.nueve==2:
-            valorcartas=118
-        elif puntuacion.ocho==2:
-            valorcartas=117
-        elif puntuacion.siete==2:
-            valorcartas=116
-        elif puntuacion.seis==2:
-            valorcartas=115
-        elif puntuacion.cinco==2:
-            valorcartas=114
-        elif puntuacion.cuatro==2:
-            valorcartas=113
-        elif puntuacion.tres==2:
-            valorcartas=112
-        elif puntuacion.dos==2:
-            valorcartas=111
-    elif puntuacion.reina==2:
-        if puntuacion.jota==2:
-                valorcartas=110
-        elif puntuacion.diez==2:
-                valorcartas=109
-        elif puntuacion.nueve==2:
-                valorcartas=108
-        elif puntuacion.ocho==2:
-                valorcartas=107
-        elif puntuacion.siete==2:
-                valorcartas=106
-        elif puntuacion.seis==2:
-                valorcartas=105
-        elif puntuacion.cinco==2:
-                valorcartas=104
-        elif puntuacion.cuatro==2:
-                valorcartas=103
-        elif puntuacion.tres==2:
-                valorcartas=102
-        elif puntuacion.dos==2:
-                valorcartas=101
-    elif puntuacion.jota==2:
-        if puntuacion.diez==2:
-            valorcartas=100
-        elif puntuacion.nueve==2:
-            valorcartas=99
-        elif puntuacion.ocho==2:
-            valorcartas=98
-        elif puntuacion.siete==2:
-            valorcartas=97
-        elif puntuacion.seis==2:
-            valorcartas=96
-        elif puntuacion.cinco==2:
-            valorcartas=95
-        elif puntuacion.cuatro==2:
-            valorcartas=94
-        elif puntuacion.tres==2:
-            valorcartas=93
-        elif puntuacion.dos==2:
-            valorcartas=92
-    elif puntuacion.diez==2:
-        if puntuacion.nueve==2:
-            valorcartas=91
-        elif puntuacion.ocho==2:
-            valorcartas=90
-        elif puntuacion.siete==2:
-            valorcartas=89
-        elif puntuacion.seis==2:
-            valorcartas=88
-        elif puntuacion.cinco==2:
-            valorcartas=87
-        elif puntuacion.cuatro==2:
-            valorcartas=86
-        elif puntuacion.tres==2:
-            valorcartas=85
-        elif puntuacion.dos==2:
-             valorcartas=84
-    elif puntuacion.nueve==2:
-        if puntuacion.ocho==2:
-            valorcartas=83
-        elif puntuacion.siete==2:
-            valorcartas=82
-        elif puntuacion.seis==2:
-            valorcartas=81
-        elif puntuacion.cinco==2:
-            valorcartas=80
-        elif puntuacion.cuatro==2:
-            valorcartas=79
-        elif puntuacion.tres==2:
-            valorcartas=78
-        elif puntuacion.dos==2:
-             valorcartas=77
-    elif puntuacion.ocho==2:
-        if puntuacion.siete==2:
-            valorcartas=76
-        elif puntuacion.seis==2:
-            valorcartas=75
-        elif puntuacion.cinco==2:
-            valorcartas=74
-        elif puntuacion.cuatro==2:
-            valorcartas=73
-        elif puntuacion.tres==2:
-            valorcartas=72
-        elif puntuacion.dos==2:
-             valorcartas=71
-    elif puntuacion.siete==2:
-        if puntuacion.seis==2:
-            valorcartas=70
-        elif puntuacion.cinco==2:
-            valorcartas=69
-        elif puntuacion.cuatro==2:
-            valorcartas=68
-        elif puntuacion.tres==2:
-            valorcartas=67
-        else:
-            valorcartas=66
-    elif puntuacion.seis==2:
-        if puntuacion.cinco==2:
-            valorcartas=65
-        elif puntuacion.cuatro==2:
-            valorcartas=64
-        elif puntuacion.tres==2:
-            valorcartas=63
-        elif puntuacion.dos==2:
-             valorcartas=62
-    elif puntuacion.cinco==2:
-        if puntuacion.cuatro==2:
-            valorcartas=61
-        elif puntuacion.tres==2:
-            valorcartas=60
-        elif puntuacion.dos==2:
-             valorcartas=59
-    elif puntuacion.cuatro==2:
-        if puntuacion.tres==2:
-            valorcartas=58
-        elif puntuacion.dos==2:
-             valorcartas=57
-    elif puntuacion.tres==2:
-        if puntuacion.dos==2:
-             valorcartas=56
-#Pareja
-    elif puntuacion.ass==2:
-        valorcartas=55
-    elif puntuacion.rey==2:
-        valorcartas=54
-    elif puntuacion.reina==2:
-        valorcartas=53
-    elif puntuacion.jota==2:
-        valorcartas=52
-    elif puntuacion.diez==2:
-        valorcartas=51
-    elif puntuacion.nueve==2:
-        valorcartas=50
-    elif puntuacion.ocho==2:
-        valorcartas=49
-    elif puntuacion.siete==2:
-        valorcartas=48
-    elif puntuacion.seis==2:
-        valorcartas=47
-    elif puntuacion.cinco==2:
-        valorcartas=46
-    elif puntuacion.cuatro==2:
-        valorcartas=45
-    elif puntuacion.tres==2:
-        valorcartas=44
-    elif puntuacion.dos==2:
-        valorcartas=43
 #Carta Alta

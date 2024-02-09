@@ -2,6 +2,7 @@ import time
 import poker2
 import bot
 import puntuacion
+import comparacion
 
 def juego():
     poker2.credito()
@@ -20,11 +21,10 @@ def juego():
     print("Tus cartas con el flop es:")
     print(" ".join(poker2.cartas_jugador1))
     time.sleep(1)
-    print("tu puntuacion actual es:" , puntuacion.puntostotales)
+    print("tu puntuacion actual es:" )
     time.sleep(1)
     poker2.pregunta()
     poker2.botap(poker2.max_creditbot)
-    puntuacion.comparacion()
     jugardenuevo=input("Quieres volver a jugar o terminar (jugar/terminar)")
     if jugardenuevo=="jugar":
         juego()

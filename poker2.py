@@ -74,9 +74,11 @@ def flop(n):
 def apostar():
     apuesta=int(input("Cuanto deseas apostar?"))
     global max_credito
+    global max_creditbot
     botet(apuesta)
     max_credito-=apuesta
     menos_del_max()
+    botap(max_creditbot)
 
 def botet(algo):
     global bote
@@ -86,9 +88,11 @@ def botet(algo):
 
 def ciega():
     global ciega_grande
+    global max_credito
     ciega_pequeña=int(input("Ingrese la ciega pequeña:"))
     ciega_grande=ciega_pequeña*2
     sumaciega=ciega_grande+ciega_pequeña
+    max_credito-=ciega_pequeña
     time.sleep(1)
     print("La ciega grande es:", ciega_grande)
     botet(sumaciega)
@@ -116,13 +120,15 @@ def pregunta():
 
 def botap(algo):
     global max_creditbot
+    global ciega_grande
     bot = random.randint(1,10)
-    if 9>bot>=1:
+    if 10>=bot>=1:
         print("El bot a decidido apostar")
         dudi = random.randrange(ciega_grande, algo)
         print("El bot ha apostado:", dudi)
         botet(dudi)
         max_creditbot-=dudi
+        max_creditbot-=ciega_grande
     else:
         print("El bot ha decidido retirarse, Has ganado:")
         salirvictoria()

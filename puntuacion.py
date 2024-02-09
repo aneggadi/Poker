@@ -1,6 +1,7 @@
 import poker2
 import bot
 
+#Funcion para juntar los num de las cartas en una variable por num del jugador
 def numjugador(numcartas):
     global dos; global tres; global cuatro; global cinco; global seis; global siete; global ocho; global nueve; global diez; global jota; global reina; global rey; global ass
     dos=0; tres=0; cuatro=0; cinco=0; seis=0; siete=0; ocho=0; nueve=0; diez=0; jota=0; reina=0; rey=0; ass=0
@@ -32,6 +33,7 @@ def numjugador(numcartas):
         elif poker2.cartas_jugador1[i]=='A ' + chr(3) or poker2.cartas_jugador1[i]=='A ' + chr(4) or poker2.cartas_jugador1[i]=='A ' + chr(5) or poker2.cartas_jugador1[i]=='A ' + chr(6):
             ass+=1
 
+#Funcion para juntar los num de las cartas en una variable por num del bot
 def numbot(cartasrepartidas):
     global dos; global tres; global cuatro; global cinco; global seis; global siete; global ocho; global nueve; global diez; global jota; global reina; global rey; global ass
     dos=0; tres=0; cuatro=0; cinco=0; seis=0; siete=0; ocho=0; nueve=0; diez=0; jota=0; reina=0; rey=0; ass=0

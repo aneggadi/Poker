@@ -2,7 +2,6 @@ import random
 import time 
 import poker2
 
-poker2.baraja
 cartasbot=[]
 
 

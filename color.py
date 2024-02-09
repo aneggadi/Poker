@@ -1,6 +1,7 @@
 import poker2
 import bot
 
+#Funcion para juntar el color de las cartas en una variable por color del jugador
 def  puntosjugador(cartasrepartidas):
     global corazones; global diamantes; global trebor; global picas
     corazones  = 0; diamantes  = 0; trebor  = 0;   picas = 0
@@ -14,7 +15,7 @@ def  puntosjugador(cartasrepartidas):
         elif poker2.cartas_jugador1[i]=='2 '   + chr(6) or poker2.cartas_jugador1[i]=='3 ' + chr(6) or poker2.cartas_jugador1[i]=='4 ' + chr(6) or poker2.cartas_jugador1[i]=='5 ' + chr(6)  or poker2.cartas_jugador1[i]=='6 ' + chr(6) or poker2.cartas_jugador1[i]=='7 ' + chr(6) or poker2.cartas_jugador1[i]=='8 ' + chr(6) or poker2.cartas_jugador1[i]=='9 ' + chr(6) or poker2.cartas_jugador1[i]=='10 ' + chr(6) or poker2.cartas_jugador1[i]=='J ' + chr(6) or poker2.cartas_jugador1[i]=='Q ' + chr(6) or poker2.cartas_jugador1[i]=='K ' + chr(6) or poker2.cartas_jugador1[i]=='A ' + chr(6):
             picas+=1
 
-
+#Funcion para juntar el color de las cartas en una variable por color del bot
 def puntosbot(cartasrepartidas):
     global corazones; global diamantes; global trebor; global picas
     corazones=0; diamantes=0; trebor=0; picas=0

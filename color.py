@@ -9,11 +9,11 @@ def  puntosjugador(cartasrepartidas):
         if poker2.cartas_jugador1[i] == '2 '   + chr(3) or poker2.cartas_jugador1[i]=='3 ' + chr(3) or poker2.cartas_jugador1[i]=='4 ' + chr(3) or poker2.cartas_jugador1[i]=='5 ' + chr(3)  or poker2.cartas_jugador1[i]=='6 ' + chr(3) or poker2.cartas_jugador1[i]=='7 ' + chr(3) or poker2.cartas_jugador1[i]=='8 ' + chr(3) or poker2.cartas_jugador1[i]=='9 ' + chr(3) or poker2.cartas_jugador1[i]=='10 ' + chr(3) or poker2.cartas_jugador1[i]=='J ' + chr(3) or poker2.cartas_jugador1[i]=='Q ' + chr(3) or poker2.cartas_jugador1[i]=='K ' + chr(3) or poker2.cartas_jugador1[i]=='A ' + chr(3):
             corazonesjugador+=1
         elif poker2.cartas_jugador1[i]=='2 '   + chr(4) or poker2.cartas_jugador1[i]=='3 ' + chr(4) or poker2.cartas_jugador1[i]=='4 ' + chr(4) or poker2.cartas_jugador1[i]=='5 ' + chr(4)  or poker2.cartas_jugador1[i]=='6 ' + chr(4) or poker2.cartas_jugador1[i]=='7 ' + chr(4) or poker2.cartas_jugador1[i]=='8 ' + chr(4) or poker2.cartas_jugador1[i]=='9 ' + chr(4) or poker2.cartas_jugador1[i]=='10 ' + chr(4) or poker2.cartas_jugador1[i]=='J ' + chr(4) or poker2.cartas_jugador1[i]=='Q ' + chr(4) or poker2.cartas_jugador1[i]=='K ' + chr(4) or poker2.cartas_jugador1[i]=='A ' + chr(4):
-            corazonesjugador+=1
+            diamantesjugador+=1
         elif poker2.cartas_jugador1[i]=='2 '   + chr(5) or poker2.cartas_jugador1[i]=='3 ' + chr(5) or poker2.cartas_jugador1[i]=='4 ' + chr(5) or poker2.cartas_jugador1[i]=='5 ' + chr(5)  or poker2.cartas_jugador1[i]=='6 ' + chr(5) or poker2.cartas_jugador1[i]=='7 ' + chr(5) or poker2.cartas_jugador1[i]=='8 ' + chr(5) or poker2.cartas_jugador1[i]=='9 ' + chr(5) or poker2.cartas_jugador1[i]=='10 ' + chr(5) or poker2.cartas_jugador1[i]=='J ' + chr(5) or poker2.cartas_jugador1[i]=='Q ' + chr(5) or poker2.cartas_jugador1[i]=='K ' + chr(5) or poker2.cartas_jugador1[i]=='A ' + chr(5):
-            corazonesjugador+=1
+            treborjugador+=1
         elif poker2.cartas_jugador1[i]=='2 '   + chr(6) or poker2.cartas_jugador1[i]=='3 ' + chr(6) or poker2.cartas_jugador1[i]=='4 ' + chr(6) or poker2.cartas_jugador1[i]=='5 ' + chr(6)  or poker2.cartas_jugador1[i]=='6 ' + chr(6) or poker2.cartas_jugador1[i]=='7 ' + chr(6) or poker2.cartas_jugador1[i]=='8 ' + chr(6) or poker2.cartas_jugador1[i]=='9 ' + chr(6) or poker2.cartas_jugador1[i]=='10 ' + chr(6) or poker2.cartas_jugador1[i]=='J ' + chr(6) or poker2.cartas_jugador1[i]=='Q ' + chr(6) or poker2.cartas_jugador1[i]=='K ' + chr(6) or poker2.cartas_jugador1[i]=='A ' + chr(6):
-            corazonesjugador+=1
+            picasjugador+=1
 
 
 def puntosbot(cartasrepartidas):

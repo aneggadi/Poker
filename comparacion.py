@@ -555,7 +555,7 @@ def escaleracolor():
         valorcartasjugador=135
     elif puntuacion.dos==3:
         valorcartasjugador=134
-#Doble pareja y Pareja
+#Doble pareja
     elif puntuacion.ass==2:
         if puntuacion.rey==2:
             valorcartasjugador=133
@@ -581,8 +581,6 @@ def escaleracolor():
             valorcartasjugador=123
         elif puntuacion.dos==2:
             valorcartasjugador=122
-        else:
-            valorcartasjugador=301
     elif puntuacion.rey==2:
         if puntuacion.reina==2:
             valorcartasjugador=121
@@ -606,8 +604,6 @@ def escaleracolor():
             valorcartasjugador=112
         elif puntuacion.dos==2:
             valorcartasjugador=111
-        else:
-            valorcartasjugador=301
     elif puntuacion.reina==2:
         if puntuacion.jota==2:
                 valorcartasjugador=110
@@ -629,8 +625,6 @@ def escaleracolor():
                 valorcartasjugador=102
         elif puntuacion.dos==2:
                 valorcartasjugador=101
-        else:
-            valorcartasjugador=301
     elif puntuacion.jota==2:
         if puntuacion.diez==2:
             valorcartasjugador=100
@@ -650,8 +644,6 @@ def escaleracolor():
             valorcartasjugador=93
         elif puntuacion.dos==2:
             valorcartasjugador=92
-        else:
-            valorcartasjugador=301
     elif puntuacion.diez==2:
         if puntuacion.nueve==2:
             valorcartasjugador=91
@@ -669,8 +661,6 @@ def escaleracolor():
             valorcartasjugador=85
         elif puntuacion.dos==2:
              valorcartasjugador=84
-        else:
-            valorcartasjugador=301
     elif puntuacion.nueve==2:
         if puntuacion.ocho==2:
             valorcartasjugador=83
@@ -686,8 +676,6 @@ def escaleracolor():
             valorcartasjugador=78
         elif puntuacion.dos==2:
              valorcartasjugador=77
-        else:
-            valorcartasjugador=301
     elif puntuacion.ocho==2:
         if puntuacion.siete==2:
             valorcartasjugador=234
@@ -701,8 +689,6 @@ def escaleracolor():
             valorcartasjugador=230
         elif puntuacion.dos==2:
              valorcartasjugador=229
-        else:
-            valorcartasjugador=301
     elif puntuacion.siete==2:
         if puntuacion.seis==2:
             valorcartasjugador=221
@@ -712,8 +698,6 @@ def escaleracolor():
             valorcartasjugador=219
         elif puntuacion.tres==2:
             valorcartasjugador=218
-        elif puntuacion.dos==2:
-             valorcartasjugador=217
         else:
             valorcartasjugador=301
     elif puntuacion.seis==2:
@@ -725,8 +709,6 @@ def escaleracolor():
             valorcartasjugador=206
         elif puntuacion.dos==2:
              valorcartasjugador=205
-        else:
-            valorcartasjugador=301
     elif puntuacion.cinco==2:
         if puntuacion.cuatro==2:
             valorcartasjugador=195
@@ -734,17 +716,38 @@ def escaleracolor():
             valorcartasjugador=194
         elif puntuacion.dos==2:
              valorcartasjugador=193
-        else:
-            valorcartasjugador=301
     elif puntuacion.cuatro==2:
         if puntuacion.tres==2:
             valorcartasjugador=182
         elif puntuacion.dos==2:
              valorcartasjugador=181
-        else:
-            valorcartasjugador=301
     elif puntuacion.tres==2:
         if puntuacion.dos==2:
              valorcartasjugador=169
-        else:
-            valorcartasjugador=301
+#Pareja
+    elif puntuacion.ass==2:
+        valorcartasjugador=146
+    elif puntuacion.rey==2:
+        valorcartasjugador=145
+    elif puntuacion.reina==2:
+        valorcartasjugador=144
+    elif puntuacion.jota==2:
+        valorcartasjugador=143
+    elif puntuacion.diez==2:
+        valorcartasjugador=142
+    elif puntuacion.nueve==2:
+        valorcartasjugador=141
+    elif puntuacion.ocho==3:
+        valorcartasjugador=140
+    elif puntuacion.siete==3:
+        valorcartasjugador=139
+    elif puntuacion.seis==3:
+        valorcartasjugador=138
+    elif puntuacion.cinco==3:
+        valorcartasjugador=137
+    elif puntuacion.cuatro==3:
+        valorcartasjugador=136
+    elif puntuacion.tres==3:
+        valorcartasjugador=135
+    elif puntuacion.dos==3:
+        valorcartasjugador=134

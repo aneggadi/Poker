@@ -17,19 +17,16 @@ def juego():
     poker2.ciega()
     print("El flop es:")
     poker2.flop(3)
-    puntuacion.numjugador(len(poker2.cartas_jugador1))
-    puntuacion.numbot(len(bot.cartasbot))
     print("  ")
     print("Tus cartas con el flop es:")
     print(" ".join(poker2.cartas_jugador1))
     time.sleep(1)
-    puntuacion.numjugador(5)
-    color.puntosjugador(5)
+    puntuacion.numjugador(len(poker2.cartas_jugador1))
+    color.puntosjugador(len(poker2.cartas_jugador1))
     print(puntuacion.dos, puntuacion.tres, puntuacion.cuatro, puntuacion.cinco, 
             puntuacion.seis, puntuacion.siete, puntuacion.ocho, puntuacion.nueve,
-            puntuacion.diez, puntuacion.jota, puntuacion.reina, puntuacion.rey, 
-            puntuacion.rey, puntuacion.ass)
-    print(color.corazonesjugador, color.diamantesjugador, color.picasbot, color.treborjugador)
+            puntuacion.diez, puntuacion.jota, puntuacion.reina, puntuacion.rey, puntuacion.ass)
+    print(color.corazonesjugador, color.diamantesjugador, color.picasjugador, color.treborjugador)
     comparacion.escaleracolor()
     print("tu puntuacion actual es:", comparacion.valorcartasjugador)
     time.sleep(1)

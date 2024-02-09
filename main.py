@@ -26,6 +26,7 @@ def juego():
     comparacion.escaleracolor()
     print(puntuacion.ass)
     valorcartasjugador=comparacion.valorcartas
+    time.sleep(1)
     puntuacion.numbot(len(bot.cartasbot))
     color.puntosbot(len(bot.cartasbot))
     comparacion.escaleracolor()

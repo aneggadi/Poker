@@ -1,10 +1,9 @@
 import poker2
 import bot
 
-dos=0; tres=0; cuatro=0; cinco=0; seis=0; siete=0; ocho=0; nueve=0; diez=0; jota=0; reina=0; rey=0; ass=0
-dosbot=0; tresbot=0; cuatrobot=0; cincobot=0; seisbot=0; sietebot=0; ochobot=0; nuevebot=0; diezbot=0; jotabot=0; reinabot=0; reybot=0; assbot=0
 def numjugador(numcartas):
     global dos; global tres; global cuatro; global cinco; global seis; global siete; global ocho; global nueve; global diez; global jota; global reina; global rey; global ass
+    dos=0; tres=0; cuatro=0; cinco=0; seis=0; siete=0; ocho=0; nueve=0; diez=0; jota=0; reina=0; rey=0; ass=0
     for i in range(numcartas):
         if poker2.cartas_jugador1[i]=='2 ' + chr(3) or poker2.cartas_jugador1[i]=='2 ' + chr(4) or poker2.cartas_jugador1[i]=='2 ' + chr(5) or poker2.cartas_jugador1[i]=='2 ' + chr(6):
             dos+=1
@@ -34,31 +33,32 @@ def numjugador(numcartas):
             ass+=1
 
 def numbot(cartasrepartidas):
-    global dosbot; global tresbot; global cuatrobot; global cincobot; global seisbot; global sietebot; global ochobot; global nuevebot; global diezbot; global jotabot; global reinabot; global reybot; global assbot
+    global dos; global tres; global cuatro; global cinco; global seis; global siete; global ocho; global nueve; global diez; global jota; global reina; global rey; global ass
+    dos=0; tres=0; cuatro=0; cinco=0; seis=0; siete=0; ocho=0; nueve=0; diez=0; jota=0; reina=0; rey=0; ass=0
     for i in range(cartasrepartidas):
         if bot.cartasbot[i]=='2 ' + chr(3) or bot.cartasbot[i]=='2 ' + chr(4) or bot.cartasbot[i]=='2 ' + chr(5) or bot.cartasbot[i]=='2 ' + chr(6):
-            dosbot+=1
+            dos+=1
         elif bot.cartasbot[i]=='3 ' + chr(3) or bot.cartasbot[i]=='3 ' + chr(4) or bot.cartasbot[i]=='3 ' + chr(5) or bot.cartasbot[i]=='3 ' + chr(6):
-            tresbot+=1
+            tres+=1
         elif bot.cartasbot[i]=='4 ' + chr(3) or bot.cartasbot[i]=='4 ' + chr(4) or bot.cartasbot[i]=='4 ' + chr(5) or bot.cartasbot[i]=='4 ' + chr(6):
-            cuatrobot+=1
+            cuatro+=1
         elif bot.cartasbot[i]=='5 ' + chr(3) or bot.cartasbot[i]=='5 ' + chr(4) or bot.cartasbot[i]=='5 ' + chr(5) or bot.cartasbot[i]=='5 ' + chr(6):
-            cincobot+=1
+            cinco+=1
         elif bot.cartasbot[i]=='6 ' + chr(3) or bot.cartasbot[i]=='6 ' + chr(4) or bot.cartasbot[i]=='6 ' + chr(5) or bot.cartasbot[i]=='6 ' + chr(6):
-            seisbot+=1
+            seis+=1
         elif bot.cartasbot[i]=='7 ' + chr(3) or bot.cartasbot[i]=='7 ' + chr(4) or bot.cartasbot[i]=='7 ' + chr(5) or bot.cartasbot[i]=='7 ' + chr(6):
-            sietebot+=1
+            siete+=1
         elif bot.cartasbot[i]=='8 ' + chr(3) or bot.cartasbot[i]=='8 ' + chr(4) or bot.cartasbot[i]=='8 ' + chr(5) or bot.cartasbot[i]=='8 ' + chr(6):
-            ochobot+=1
+            ocho+=1
         if bot.cartasbot[i]=='9 ' + chr(3) or bot.cartasbot[i]=='9 ' + chr(4) or bot.cartasbot[i]=='9 ' + chr(5) or bot.cartasbot[i]=='9 ' + chr(6):
-            nuevebot+=1
+            nueve+=1
         if bot.cartasbot[i]=='10 ' + chr(3) or bot.cartasbot[i]=='10 ' + chr(4) or bot.cartasbot[i]=='10 ' + chr(5) or bot.cartasbot[i]=='10 ' + chr(6):
-            diezbot+=1
+            diez+=1
         if bot.cartasbot[i]=='J ' + chr(3) or bot.cartasbot[i]=='J ' + chr(4) or bot.cartasbot[i]=='J ' + chr(5) or bot.cartasbot[i]=='J ' + chr(6):
-            jotabot+=1
+            jota+=1
         if bot.cartasbot[i]=='Q ' + chr(3) or bot.cartasbot[i]=='Q ' + chr(4) or bot.cartasbot[i]=='Q ' + chr(5) or bot.cartasbot[i]=='Q ' + chr(6):
-            reinabot+=1
+            reina+=1
         if bot.cartasbot[i]=='K ' + chr(3) or bot.cartasbot[i]=='K ' + chr(4) or bot.cartasbot[i]=='K ' + chr(5) or bot.cartasbot[i]=='K ' + chr(6):
-            reybot+=1
+            rey+=1
         if bot.cartasbot[i]=='A ' + chr(3) or bot.cartasbot[i]=='A ' + chr(4) or bot.cartasbot[i]=='A ' + chr(5) or bot.cartasbot[i]=='A ' + chr(6):
-            assbot+=1    
+            ass+=1    

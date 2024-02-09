@@ -5,7 +5,7 @@ import color
 valorcartas=0
 def escaleracolor():
     global valorcartas
-    if color.treborjugador==5 or color.picasjugador==5 or color.corazonesjugador==5 or color.diamantesjugador==5:
+    if color.trebor==5 or color.picas==5 or color.corazones==5 or color.diamantes==5:
         if puntuacion.dos==1:
             if puntuacion.tres==1:
                 if puntuacion.cuatro==1:

@@ -7,6 +7,7 @@ import comparacion
 
 #programa principal
 def juego():
+    poker2.ns()
     poker2.credito()
     print("Tu credito actual es:", poker2.max_credito)
     print("Tu mano:")
@@ -36,14 +37,23 @@ def juego():
     if valorcartasjugador>comparacion.valorcartas:
         ganador=poker2.max_credito+poker2.bote
         print("has ganado al bot enohrabuena!!!. Te has llevado:", ganador)
+        print("las cartas del bot eran: ", " ".join(bot.cartasbot))
+
     elif valorcartasjugador==comparacion.valorcartas:
         empate=poker2.bote/2
         print("Habeis quedado empate tu y el bot os vamos a repartir el bote, te has llevado:", empate)
+        print("las cartas del bot eran: ", " ".join(bot.cartasbot))
+        print("los puntos del bot eran:", comparacion.valorcartas)
     else:
-        print("Menudo pirngado te ha ganado un bot, se ha llevado el bot:", poker2.bote)
+        print("Menudo pringado te ha ganado un bot, se ha llevado el bot:", poker2.bote)
+        print("las cartas del bot eran: ", " ".join(bot.cartasbot))
+        print("los puntos del bot eran:", comparacion.valorcartas)
     
     jugardenuevo=input("Quieres volver a jugar o terminar (jugar/terminar)")
     if jugardenuevo=="jugar":
+        poker2.bote=0
+        poker2.cartas_jugador1=[]
+        bot.cartasbot=[]
         juego()
     if jugardenuevo=="terminar":
         exit()

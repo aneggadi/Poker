@@ -3,7 +3,7 @@ import time
 import bot
 
 #creamos una baraja
-baraja = [
+baraja1 = [
     '2 ' + chr(3), '3 ' + chr(3), '4 ' + chr(3) , '5 ' + chr(3), '6 ' + chr(3), '7 ' + chr(3), '8 ' + chr(3),
     '9 ' + chr(3), '10 ' + chr(3), 'J ' + chr(3), 'Q ' + chr(3), 'K ' + chr(3), 'A ' + chr(3),
     '2 ' + chr(4), '3 ' + chr(4), '4 ' + chr(4), '5 ' + chr(4), '6 ' + chr(4), '7 ' + chr(4), '8 ' + chr(4),
@@ -13,7 +13,9 @@ baraja = [
     '2 ' + chr(5), '3 ' + chr(5), '4 ' + chr(5), '5 ' + chr(5), '6 ' + chr(5), '7 ' + chr(5), '8 ' + chr(5),
     '9 ' + chr(5), '10 ' + chr(5), 'J ' + chr(5), 'Q ' + chr(5), 'K ' + chr(5), 'A ' + chr(5)
 ]
-
+def ns():
+    global baraja
+    baraja=baraja1
 bote = 0
 #funcion del credito inicial
 def credito():
@@ -56,12 +58,12 @@ def menos_creditos_bot():
         salirvictoria()
 
 #mezcla la baraja
-def cartas_jugador():
+def shuffle():
     random.shuffle(baraja)
 
 #funcion que reparte al jugador añade las cartas repartidas a tus cartas y elimina esas cartas de la baraja
 def repartir(n):
-    cartas_jugador()
+    shuffle()
     i=0
     while i<n:
         print(baraja[i])
@@ -72,7 +74,7 @@ def repartir(n):
 
 #repartimos el flop que se mete dentro de tus y las del bot y se eliminan de la baraja
 def flop(n):
-    cartas_jugador()
+    shuffle()
     i=0
     while i<n:
         print(baraja[i])
